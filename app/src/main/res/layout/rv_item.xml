@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gender"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_circle"
+        android:backgroundTint="@color/purple_200"
+        android:padding="5dp"
+        android:text="M"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cowNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cow No"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/gender"
+        app:layout_constraintBottom_toTopOf="@id/calvingDate"
+        app:layout_constraintTop_toTopOf="@id/gender" />
+
+    <TextView
+        android:id="@+id/peakYield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peak Yield"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cowNo" />
+
+    <TextView
+        android:id="@+id/calvingDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        app:layout_constraintStart_toStartOf="@id/cowNo"
+        app:layout_constraintTop_toBottomOf="@id/cowNo"
+        app:layout_constraintBottom_toBottomOf="@id/gender"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
